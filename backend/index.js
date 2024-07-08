@@ -13,13 +13,13 @@ const Note = require("./models/note.model");
 const express = require("express");
 const cors = require("cors");
 const app = express();
-app.use(cors(
-    {
-        origin: ["https://hashnotes-eight.vercel.app"],
-        methods: ["GET", "POST", "PUT", "DELETE"],
-        credentials: true
-    }
-));
+// app.use(cors(
+//     {
+//         origin: ["https://hashnotes-eight.vercel.app"],
+//         methods: ["GET", "POST", "PUT", "DELETE"],
+//         credentials: true
+//     }
+// ));
 
 const jwt = require("jsonwebtoken");
 const { authenticateToken } = require("./utilities");
@@ -29,12 +29,12 @@ const { authenticateToken } = require("./utilities");
 //middleware to parse all incoming json from req into javascrip objects for server & make it accessible in req.body
 app.use(express.json());
 
-// //middleware to enable cross-origin resource sharing from any domain (`*`) during development
-// app.use(
-//     cors({
-//         origin: "*",
-//     })
-// );
+//middleware to enable cross-origin resource sharing from any domain (`*`) during development
+app.use(
+    cors({
+        origin: "*",
+    })
+);
 
 app.get("/", (req, res) => {
     res.json({ data: "hello" })
