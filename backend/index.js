@@ -13,6 +13,13 @@ const Note = require("./models/note.model");
 const express = require("express");
 const cors = require("cors");
 const app = express();
+app.use(cors(
+    {
+        origin: ["https://hashnotes-eight.vercel.app"],
+        methods: ["GET", "POST", "PUT", "DELETE"],
+        credentials: true
+    }
+));
 
 const jwt = require("jsonwebtoken");
 const { authenticateToken } = require("./utilities");
