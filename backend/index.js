@@ -13,13 +13,13 @@ const Note = require("./models/note.model");
 const express = require("express");
 const cors = require("cors");
 const app = express();
-// app.use(cors(
-//     {
-//         origin: ["https://hashnotes-eight.vercel.app"],
-//         methods: ["GET", "POST", "PUT", "DELETE"],
-//         credentials: true
-//     }
-// ));
+app.use(cors(
+    {
+        origin: "https://hashnotes-eight.vercel.app",
+        methods: ["GET", "POST", "PUT", "DELETE"],
+        credentials: true
+    }
+));
 
 const jwt = require("jsonwebtoken");
 const { authenticateToken } = require("./utilities");
@@ -35,7 +35,6 @@ app.use(express.json());
 //         origin: "*",
 //     })
 // );
-app.use(cors());
 
 app.get("/", (req, res) => {
     res.json({ data: "hello" })
