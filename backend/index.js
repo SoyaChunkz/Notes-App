@@ -18,7 +18,7 @@ app.use(express.json());
 // Define CORS options
 const corsOptions = {
     origin: "https://hashnotes-eight.vercel.app", // Your frontend URL
-    // allowedHeaders: ["Content-Type", "Authorization"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
   };
