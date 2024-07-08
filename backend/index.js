@@ -1,36 +1,41 @@
 require("dotenv").config();
 
-const config = require("./config.json");
+// const config = require("./config.json");
 const mongoose = require("mongoose");
+const User = require("./models/user.model");
+const Note = require("./models/note.model");
+const express = require("express");
+const cors = require("cors");
+const jwt = require("jsonwebtoken");
+const { authenticateToken } = require("./utilities");
 
+
+const app = express();
+
+//middleware to parse all incoming json from req into javascrip objects for server & make it accessible in req.body
+app.use(express.json());
+
+// Define CORS options
+const corsOptions = {
+    origin: "https://hashnotes-eight.vercel.app", // Your frontend URL
+    // allowedHeaders: ["Content-Type", "Authorization"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+  };
+  
+  // Use CORS middleware with the options
+  app.use(cors(corsOptions));
+  app.options("*", cors(corsOptions)); // Handle preflight requests
+
+// MongoDB Connection
 mongoose.connect(process.env.MONGODB_CONNECTION_STRING, {
     useNewUrlParser: true,
     useUnifiedTopolgy: true
 }).then(() => console.log('Connected to MongoDB'))
 .catch(err => console.error('Failed to connect to MongoDB', err));
 
-const User = require("./models/user.model");
-const Note = require("./models/note.model");
-
-const express = require("express");
-const cors = require("cors");
-const app = express();
-app.use(cors(
-    {
-        origin: "https://hashnotes-eight.vercel.app",
-        allowedHeaders: ["Content-Type", "Authorization"],
-        methods: ["GET", "POST", "PUT", "DELETE"],
-        credentials: true
-    }
-));
-
-const jwt = require("jsonwebtoken");
-const { authenticateToken } = require("./utilities");
 
 
-
-//middleware to parse all incoming json from req into javascrip objects for server & make it accessible in req.body
-app.use(express.json());
 
 // //middleware to enable cross-origin resource sharing from any domain (`*`) during development
 // app.use(
@@ -465,7 +470,8 @@ app.get("/search-notes", authenticateToken, async (req, res) => {
 
 })
 
-app.listen(8000, function () {
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, function () {
     console.log('Example app listening on port 8000!');
 });
 
