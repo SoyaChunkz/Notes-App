@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://hashnotes-eight.vercel.app/'
+export const BASE_URL = 'https://hashnotes-api.vercel.app/'
