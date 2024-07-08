@@ -29,12 +29,13 @@ const { authenticateToken } = require("./utilities");
 //middleware to parse all incoming json from req into javascrip objects for server & make it accessible in req.body
 app.use(express.json());
 
-//middleware to enable cross-origin resource sharing from any domain (`*`) during development
-app.use(
-    cors({
-        origin: "*",
-    })
-);
+// //middleware to enable cross-origin resource sharing from any domain (`*`) during development
+// app.use(
+//     cors({
+//         origin: "*",
+//     })
+// );
+app.use(cors());
 
 app.get("/", (req, res) => {
     res.json({ data: "hello" })
