@@ -3,9 +3,11 @@ require("dotenv").config();
 const config = require("./config.json");
 const mongoose = require("mongoose");
 
-mongoose.connect(config.connectionString)
-    .then(() => console.log('Connected to MongoDB'))
-    .catch(err => console.error('Failed to connect to MongoDB', err));
+mongoose.connect(process.env.MONGODB_CONNECTION_STRING, {
+    useNewUrlParser: true,
+    useUnifiedTopolgy: true
+}).then(() => console.log('Connected to MongoDB'))
+.catch(err => console.error('Failed to connect to MongoDB', err));
 
 const User = require("./models/user.model");
 const Note = require("./models/note.model");
@@ -16,6 +18,7 @@ const app = express();
 app.use(cors(
     {
         origin: "https://hashnotes-eight.vercel.app",
+        allowedHeaders: ["Content-Type", "Authorization"],
         methods: ["GET", "POST", "PUT", "DELETE"],
         credentials: true
     }
