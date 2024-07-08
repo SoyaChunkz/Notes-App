@@ -15,17 +15,13 @@ const app = express();
 //middleware to parse all incoming json from req into javascrip objects for server & make it accessible in req.body
 app.use(express.json());
 
-// Define CORS options
-const corsOptions = {
-    origin: "https://hashnotes-eight.vercel.app", // Your frontend URL
-    allowedHeaders: ["Content-Type", "Authorization"],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true
-  };
-  
-  // Use CORS middleware with the options
-  app.use(cors(corsOptions));
-  app.options("*", cors(corsOptions)); // Handle preflight requests
+// Enable CORS for all routes
+app.use(cors({
+    origin: 'https://hashnotes-eight.vercel.app',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true  // Enable credentials (cookies, authorization headers) cross-origin
+}));
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGODB_CONNECTION_STRING, {
