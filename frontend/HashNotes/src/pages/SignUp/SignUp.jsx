@@ -63,8 +63,8 @@ const SignUp = () => {
     <div className='min-h-screen min-w-screen flex flex-col bg-gray-100 dark:bg-neutral-900'>
       <Navbar onSignUpPage={onSignUpPage} />
 
-      <div className={`flex items-center justify-center select-none `}>
-        <div className="w-96 md:w-[450px] bg-white dark:bg-neutral-800 border rounded-md  dark:border-none shadow-md shadow-gray-300 dark:shadow-none px-7 py-10 m-6 mb-20">
+      <div className={`flex flex-grow items-center justify-center select-none `}>
+        <div className="w-96 md:w-[450px] bg-white dark:bg-neutral-800 border rounded-md  dark:border-none shadow-md shadow-gray-300 dark:shadow-none px-7 py-10 m-6">
           <form onSubmit={handleSignUp}>
             <h4 className="text-2xl font-semibold  mb-7 text-center text-gray-700 dark:text-primary">Sign Up</h4>
 
