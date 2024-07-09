@@ -58,7 +58,7 @@ const Login = () => {
         <Navbar onLoginPage={onLoginPage} />
 
         <div className={`flex items-center justify-center flex-grow select-none `}>
-            <div className='w-96 md:w-[450px] bg-white dark:bg-neutral-800 border dark:border-none rounded-md  dark:border-neutral-400 shadow-md shadow-gray-300 dark:shadow-none px-7 py-10 m-6 '>
+            <div className='w-96 md:w-[450px] bg-white dark:bg-neutral-800 border dark:border-none rounded-md  dark:border-neutral-400 shadow-md shadow-gray-300 dark:shadow-none px-7 py-10 m-6 mt-0'>
                 <form onSubmit={ handleLogin }>
                     <h4 className='text-2xl font-semibold mb-7 text-center text-gray-700 dark:text-primary'>Login</h4>
                     <input 
