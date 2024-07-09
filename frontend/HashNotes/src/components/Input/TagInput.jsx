@@ -51,7 +51,7 @@ const TagInput = ({ tags, setTags }) => {
             <input 
                 type='text' 
                 value={inputValue}
-                className='text-sm border px-2 sm:px-3 py-1 sm:py-2 rounded-md outline-none dark:text-neutral-100 dark:placeholder:text-neutral-400 bg-slate-100 dark:bg-neutral-700 border-slate-300 dark:border-neutral-700 w-[40%]' 
+                className='text-sm border px-2 sm:px-3 py-1 sm:py-2 rounded-md outline-none dark:text-neutral-100 dark:placeholder:text-neutral-400 bg-slate-100 dark:bg-neutral-700 border-slate-300 dark:border-neutral-700 w-[88%] sm:w-[40%]' 
                 placeholder='Add tags/keywords.'
                 onChange={handleInputChange}
                 onKeyDown={handleKeyDown}
