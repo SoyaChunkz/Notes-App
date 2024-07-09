@@ -217,7 +217,7 @@ const Dashboard = () => {
           },
         }}
         contentLabel=''
-        className='w-[90%] sm:w-[70%] md:w-[40%] max-h-[80%] bg-white dark:bg-neutral-900 rounded-md mx-auto mt-14 p-4 overflow-y-scroll overscroll-contain'>
+        className='w-[90%] sm:w-[70%] md:w-[40%] max-h-[80%] bg-white dark:bg-neutral-900 rounded-md mx-auto mt-14 p-4 overflow-y-scroll 2xl:overflow-y-hidden overscroll-contain'>
 
 
         <AddEditNotes 
