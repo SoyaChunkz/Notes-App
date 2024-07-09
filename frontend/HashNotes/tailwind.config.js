@@ -18,8 +18,16 @@ export default {
           900: "#1A1A1A"
         },
       },
+      scrollbar: {
+        width: 'thin',
+        height: 'thin',
+        track: 'rounded',
+        thumb: 'rounded',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
 }
 

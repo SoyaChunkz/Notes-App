@@ -4,11 +4,19 @@ import MoonSVG from '../../assets/images/moon.svg';
 import { FaMoon, FaSun } from 'react-icons/fa6';
 import { MdSunny } from 'react-icons/md';
 
+// const DarkModeToggle = () => {
+//   const [darkMode, setDarkMode] = useState(() => {
+//     // Retrieve the stored dark mode value from localStorage
+//     const storedDarkMode = localStorage.getItem('darkMode');
+//     return storedDarkMode ? JSON.parse(storedDarkMode) : false;
+//   });
 const DarkModeToggle = () => {
   const [darkMode, setDarkMode] = useState(() => {
-    // Retrieve the stored dark mode value from localStorage
     const storedDarkMode = localStorage.getItem('darkMode');
-    return storedDarkMode ? JSON.parse(storedDarkMode) : false;
+    if (storedDarkMode !== null) {
+      return JSON.parse(storedDarkMode);
+    }
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   });
 
   useEffect(() => {
