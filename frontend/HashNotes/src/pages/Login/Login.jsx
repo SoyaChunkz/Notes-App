@@ -54,12 +54,11 @@ const Login = () => {
     };
 
   return (
-    <>
+    <div className='min-h-screen min-w-screen flex flex-col bg-gray-100 dark:bg-neutral-900'>
         <Navbar onLoginPage={onLoginPage} />
 
-        <div className='bg-gray-100 dark:bg-neutral-900 w-[100vw] h-[90.3vh]'>
-        <div className={`flex items-center justify-center flex-grow pt-10 md:pt-28  `}>
-            <div className='w-full md:w-[450px] bg-white dark:bg-neutral-800 border dark:border-none rounded-md  dark:border-neutral-400 shadow-md shadow-gray-300 dark:shadow-none px-7 py-10 mx-5 md:mx-0'>
+        <div className={`flex items-center justify-center flex-grow select-none `}>
+            <div className='w-96 md:w-[450px] bg-white dark:bg-neutral-800 border dark:border-none rounded-md  dark:border-neutral-400 shadow-md shadow-gray-300 dark:shadow-none px-7 py-10 mx-5 md:mx-0'>
                 <form onSubmit={ handleLogin }>
                     <h4 className='text-2xl font-semibold mb-7 text-center text-gray-700 dark:text-primary'>Login</h4>
                     <input 
@@ -94,8 +93,7 @@ const Login = () => {
                 </form>
             </div>
         </div>
-        </div>
-    </>
+    </div>
   )
 }
 
