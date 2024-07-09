@@ -105,7 +105,7 @@ const AddEditNotes = ( { noteData, type, onClose, getAllNotes, showToastMessage}
             <label className='input-label text-xs sm:text-sm md:text-base lg:text-lg text-slate-500 dark:text-neutral-100'>CONTENT</label>
             <textarea
                 type='text' 
-                className='text-xs sm:text-sm md:text-base lg:text-lg text-slate-950 dark:text-neutral-100 dark:placeholder:text-neutral-400 outline-none bg-slate-100 dark:bg-neutral-700 border rounded-md border-slate-300 dark:border-neutral-700 p-2 sm:p-3 md:p-4 '
+                className='text-xs sm:text-sm md:text-base lg:text-lg text-slate-950 dark:text-neutral-100 dark:placeholder:text-neutral-400 outline-none bg-slate-100 dark:bg-neutral-700 border rounded-md border-slate-300 dark:border-neutral-700 p-2 sm:p-3 md:p-4 overscroll-contain '
                 placeholder='Elaborate your Note clearly in detail.'
                 rows={10}
                 value={content}
