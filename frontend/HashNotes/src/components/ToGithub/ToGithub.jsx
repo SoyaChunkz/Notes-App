@@ -14,7 +14,8 @@ const ToGithub = ({ darkMode }) => {
     >
       <FaGithub
         size={36}
-        style={{ color: darkMode ? '#ffffff' : '#000000' }}
+        color={darkMode ? '#ffffff' : '#000000'}
+        className="text-current"
       />
     </button>
   );
