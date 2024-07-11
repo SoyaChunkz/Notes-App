@@ -4,9 +4,10 @@ import axios from "axios";
 import { BASE_URL } from "./constants";
 
 //i've added my api's link as an environment variable to the .env file too
+//process.env.API_BASE_URL
 
 const axiosInstance = axios.create({
-    baseURL: process.env.API_BASE_URL,
+    baseURL: BASE_URL,
     timeout: 15000,
     headers: {
         "Content-Type": "application/json"
