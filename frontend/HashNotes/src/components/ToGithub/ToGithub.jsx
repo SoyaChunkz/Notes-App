@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa6';
 
-const ToGithub = ({ darkMode }) => {
+const ToGithub = () => {
   const handleGitHubRedirect = () => {
     window.open('https://github.com/SoyaChunkz/Notes-App.git', '_blank');
   };
@@ -15,7 +15,6 @@ const ToGithub = ({ darkMode }) => {
       <FaGithub
         size={36}
         color={darkMode ? '#ffffff' : '#000000'}
-        className="text-current"
       />
     </button>
   );
