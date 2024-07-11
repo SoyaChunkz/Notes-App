@@ -1,8 +1,11 @@
 import axios from "axios";
-import { BASE_URL } from "./constants";
+//you could either add your backend api's link in constants.js and import it here
+//import { BASE_URL } from "./constants";
+
+//i've added my api's link as an environment variable to the .env file
 
 const axiosInstance = axios.create({
-    baseURL: BASE_URL,
+    baseURL: process.env.API_BASE_URL,
     timeout: 10000,
     headers: {
         "Content-Type": "application/json"

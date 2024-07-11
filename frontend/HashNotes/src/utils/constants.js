@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://hashnotes-api.vercel.app'
+export const BASE_URL = "your backend api's link"
