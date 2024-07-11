@@ -13,8 +13,8 @@ const ToGithub = () => {
       aria-label="GitHub Repository"
     >
       <FaGithub
+        className='text-black dark:text-white'
         size={36}
-        color={darkMode ? '#ffffff' : '#000000'}
       />
     </button>
   );
