@@ -1,1 +1,1 @@
-export const BASE_URL = "your backend api's link"
+export const BASE_URL = "add your backend api's link here"
