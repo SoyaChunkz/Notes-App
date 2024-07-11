@@ -8,7 +8,8 @@ export const getInitials = (name) => {
         return "";
     }
 
-    const words = name.split(" ");
+    const trimmedName = name.trim(); // Trim leading and trailing whitespace
+    const words = trimmedName.split(" ");
     let initials = "";
 
     for( let i=0; i<Math.min(words.length, 2); i++){
