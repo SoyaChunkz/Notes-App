@@ -12,12 +12,10 @@ const ToGithub = ({ darkMode }) => {
       onClick={handleGitHubRedirect}
       aria-label="GitHub Repository"
     >
-      {darkMode ? (
-        <FaGithub className={'text-white'} size={36} />
-      ) : (
-        <FaGithub className={'text-black'} size={36} />
-      )}
-      {/* <FaGithub className={darkMode ? 'text-white' : 'text-black'} size={36} /> */}
+      <FaGithub
+        size={36}
+        style={{ color: darkMode ? '#ffffff' : '#000000' }}
+      />
     </button>
   );
 };
