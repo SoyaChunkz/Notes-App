@@ -8,7 +8,7 @@ const ToGithub = ({ darkMode }) => {
 
   return (
     <button
-      className="fixed bottom-36 left-10 bg-gray-100 dark:bg-neutral-700 text-gray-800 dark:text-neutral-300 p-2 rounded-full shadow-xl hover:scale-125 transition-all ease-in-out z-50"
+      className="fixed bottom-32 left-10 bg-gray-100 dark:bg-neutral-700 text-gray-800 dark:text-neutral-300 p-2 rounded-full shadow-xl hover:scale-125 transition-all ease-in-out z-50"
       onClick={handleGitHubRedirect}
       aria-label="GitHub Repository"
     >
