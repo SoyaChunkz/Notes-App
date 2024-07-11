@@ -8,11 +8,16 @@ const ToGithub = ({ darkMode }) => {
 
   return (
     <button
-      className="fixed bottom-28 left-10 bg-gray-100 dark:bg-neutral-700 dark:text-neutral-300 p-2 rounded-full shadow-xl hover:scale-125 transition-all ease-in-out z-50"
+      className="fixed bottom-28 left-10 bg-gray-100 dark:bg-neutral-700 p-2 rounded-full shadow-xl hover:scale-125 transition-all ease-in-out"
       onClick={handleGitHubRedirect}
       aria-label="GitHub Repository"
     >
-      <FaGithub className={darkMode ? 'text-white' : 'text-black'} size={36} />
+      {darkMode ? (
+        <FaGithub className={'text-white'} size={36} />
+      ) : (
+        <FaGithub className={'text-black'} size={36} />
+      )}
+      {/* <FaGithub className={darkMode ? 'text-white' : 'text-black'} size={36} /> */}
     </button>
   );
 };
