@@ -1,10 +1,9 @@
 import axios from "axios";
-require("dotenv").config();
 
 //you could either add your backend api's link in constants.js and import it here
-//import { BASE_URL } from "./constants";
+import { BASE_URL } from "./constants";
 
-//i've added my api's link as an environment variable to the .env file
+//i've added my api's link as an environment variable to the .env file too
 
 const axiosInstance = axios.create({
     baseURL: process.env.API_BASE_URL,
