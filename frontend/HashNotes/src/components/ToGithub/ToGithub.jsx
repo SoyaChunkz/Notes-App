@@ -8,13 +8,13 @@ const ToGithub = () => {
 
   return (
     <button
-      className="fixed bottom-28 left-10 bg-gray-100 dark:bg-neutral-700 p-2 rounded-full shadow-xl hover:scale-125 transition-all ease-in-out"
+      className=" bg-gray-100 dark:bg-neutral-700 p-1.5 mr-2 rounded-full shadow-xl hover:scale-125 transition-all ease-in-out"
       onClick={handleGitHubRedirect}
       aria-label="GitHub Repository"
     >
       <FaGithub
         className='text-black dark:text-white'
-        size={36}
+        size={28}
       />
     </button>
   );

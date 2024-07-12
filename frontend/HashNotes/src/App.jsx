@@ -5,7 +5,6 @@ import Dashboard from './pages/Home/Dashboard.jsx';
 import Login from './pages/Login/Login.jsx';
 import SignUp from './pages/SignUp/SignUp.jsx';
 import DarkModeToggle from './components/DarkMode/DarkModeToggle.jsx';
-import ToGithub from './components/ToGithub/ToGithub.jsx';
 
 
 const routes = (
@@ -18,7 +17,6 @@ const routes = (
         <Route path='/signUp' exact element={<SignUp />} />
       </Routes>
       <DarkModeToggle />
-      <ToGithub />
     </div>
   </Router>
 );

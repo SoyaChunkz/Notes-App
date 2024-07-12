@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ProfileInfo from '../Cards/ProfileInfo';
 import { useNavigate } from 'react-router-dom';
 import Searchbar from '../Searchbar/Searchbar';
+import ToGithub from '../ToGithub/ToGithub';
 
 const Navbar = ({ userInfo, onSearchNote, handleClearSearch, onLoginPage, onSignUpPage }) => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -57,9 +58,10 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch, onLoginPage, onSign
             </div>
 
             {/* Home button on the right for larger screens */}
-            <div className='col-span-1 flex justify-center sm:justify-end'>
+            <div className='col-span-1 flex items-center justify-center sm:justify-end'>
+              <ToGithub />
               <button
-                className=" bg-white dark:bg-transparent text-primary dark:text-neutral-200 rounded-md px-2 py-1  text-center my-1 sm:mt-0 hover:scale-125 transition-all ease-in-out "
+                className=" bg-white dark:bg-transparent text-primary dark:text-neutral-200 rounded-md ml-2 text-center sm:mt-0 hover:scale-125 transition-all ease-in-out "
                 onClick={backToHomePage}
               >
                 Home
@@ -79,6 +81,7 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch, onLoginPage, onSign
             {/* HashNotes section */}
             <div className="col-span-1 sm:col-span-1 flex justify-center sm:justify-start">
               <h2 className="text-2xl font-semibold text-primary py-2">HashNotes</h2>
+              <ToGithub />
             </div>
 
             {/* Searchbar */}
@@ -93,6 +96,7 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch, onLoginPage, onSign
 
             {/* ProfileInfo */}
             <div className="col-span-1 flex justify-center sm:justify-end">
+              <ToGithub />
               <ProfileInfo 
               userInfo={userInfo} 
               onLogout={onLogout} 
