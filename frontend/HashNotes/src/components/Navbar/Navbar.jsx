@@ -94,7 +94,7 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch, onLoginPage, onSign
             </div>
 
             {/* ProfileInfo */}
-            <div className="col-span-1 flex justify-center sm:justify-end sm:items-center space-x-2">
+            <div className="col-span-1 flex justify-center sm:justify-end items-center space-x-2">
               <ToGithub />
               <ProfileInfo 
               userInfo={userInfo} 
