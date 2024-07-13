@@ -6,7 +6,7 @@ const ProfileInfo = ({ userInfo, onLogout }) => {
     
 
   return (
-    <div className='flex flex-col sm:flex-row items-center gap-3 w-full sm:w-fit'>
+    <div className='flex flex-col sm:flex-row items-center gap-3 w-fit ml-2'>
         <div className='w-12 h-12 flex items-center justify-center rounded-full text-white font-medium bg-blue-500'>
             {getInitials(userInfo?.fullName)}
         </div>

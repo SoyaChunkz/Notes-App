@@ -81,7 +81,6 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch, onLoginPage, onSign
             {/* HashNotes section */}
             <div className="col-span-1 sm:col-span-1 flex justify-center sm:justify-start">
               <h2 className="text-2xl font-semibold text-primary py-2">HashNotes</h2>
-              <ToGithub />
             </div>
 
             {/* Searchbar */}
@@ -95,7 +94,7 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch, onLoginPage, onSign
             </div>
 
             {/* ProfileInfo */}
-            <div className="col-span-1 flex justify-center sm:justify-end">
+            <div className="col-span-1 flex justify-center sm:justify-end items-center space-x-2">
               <ToGithub />
               <ProfileInfo 
               userInfo={userInfo} 
