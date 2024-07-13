@@ -7,7 +7,6 @@ import SignUp from './pages/SignUp/SignUp.jsx';
 import DarkModeToggle from './components/DarkMode/DarkModeToggle.jsx';
 import { Analytics } from '@vercel/analytics/react';
 
-
 const routes = (
   <Router>
     <div className="min-h-screen ">
