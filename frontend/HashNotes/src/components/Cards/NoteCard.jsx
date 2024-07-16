@@ -15,8 +15,8 @@ const NoteCard = ({ title, date, content, tags, isPinned, onEdit, onDelete, onPi
             <MdOutlinePushPin className={`icon-btn ${isPinned ? 'text-primary' : 'text-slate-300'} hover:scale-125 transition-all ease-in-out shrink-0`} onClick={onPinnedNote} />
         </div>
 
-        <p className='text-xs text-slate-600 mt-2 truncate dark:text-neutral-400'> 
-            { content?.slice(0, 60) }
+        <p className='text-xs text-slate-600 mt-2 truncate dark:text-neutral-400 line-clamp-2'> 
+            <div dangerouslySetInnerHTML={{ __html: content }} />
         </p>
 
         <div className='flex items-center justify-between mt-2 transition-all ease-in-out'>

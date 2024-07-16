@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import TagInput from '../../components/Input/TagInput.jsx';
 import { MdClose } from 'react-icons/md';
 import axiosInstance from '../../utils/axiosInstance.js';
+import 'quill/dist/quill.snow.css'; // Quill CSS
+import Quill from 'quill'; // Quill JS
+
 
 const AddEditNotes = ( { noteData, type, onClose, getAllNotes, showToastMessage} ) => {
 
@@ -81,6 +84,36 @@ const AddEditNotes = ( { noteData, type, onClose, getAllNotes, showToastMessage}
         }
     }
 
+    useEffect(() => {
+        // Initialize Quill editor
+        const quill = new Quill('#editor', {
+          theme: 'snow', // 'snow' for rich text toolbar
+          modules: {
+            toolbar: [
+              [{ 'header': '1' }, { 'header': '2' }, { 'font': [] }],
+              [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }],
+              ['blockquote','code-block'],
+              ['bold', 'italic', 'underline'],
+              [{ 'color': [] }, { 'align': [] }]
+            ],
+          },
+        });
+        quill.root.innerHTML = content;
+        const toolbar = quill.getModule('toolbar');
+            toolbar.container.classList.add(
+                'space-x-2', 'bg-slate-100', 'p-2', 'rounded', 'shadow-sm',
+                'text-sm', 'text-slate-950', 'dark:bg-neutral-800', 'dark:border-neutral-600', 'border-none'
+            );
+            toolbar.container.style.border = 'none';
+    
+        quill.on('text-change', () => {
+          setContent(quill.root.innerHTML); // update content state on text change
+        });
+        return () => {
+          quill.off('text-change');
+        };
+      }, []); // run once on component mount
+
   return (
     <div className='relative p-3'>
 
@@ -103,14 +136,16 @@ const AddEditNotes = ( { noteData, type, onClose, getAllNotes, showToastMessage}
 
         <div className='flex flex-col gap-2 mt-4'>
             <label className='input-label text-xs sm:text-sm md:text-base lg:text-lg text-slate-500 dark:text-neutral-100'>CONTENT</label>
-            <textarea
+            {/* <textarea
                 type='text' 
                 className='text-xs sm:text-sm md:text-base lg:text-lg text-slate-950 dark:text-neutral-100 dark:placeholder:text-neutral-400 outline-none bg-slate-100 dark:bg-neutral-700 border rounded-md border-slate-300 dark:border-neutral-700 p-2 sm:p-3 md:p-4 overscroll-contain '
                 placeholder='Elaborate your Note clearly in detail.'
                 rows={10}
                 value={content}
                 onChange={ ({target}) => setContent(target.value) }
-            />
+            /> */}
+            <div id="editor" className="text-sm text-slate-950 bg-slate-100 rounded p-2 dark:bg-neutral-800 dark:text-neutral-200" style={{ minHeight: '300px', borderStyle: 'none' }}>
+            </div>
         </div>
 
         <div className='mt-3'>
