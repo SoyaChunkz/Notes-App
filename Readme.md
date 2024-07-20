@@ -45,7 +45,7 @@ Check out the live demo of HashNotes [here](https://hashnotes-eight.vercel.app/)
 ![Edit Notes](/media/edit_notes.png)
 
 **You switch between light and dark themes anytime just with a click**
-![Switch Themes](/media/dark_mode.png.png)
+![Switch Themes](/media/dark_mode.png)
 
 ## Getting Started
 
