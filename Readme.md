@@ -31,13 +31,13 @@ Check out the live demo of HashNotes [here](https://hashnotes-eight.vercel.app/)
 **Welcome to HashNotes**
 ![Home page](/media/home_page.png)
 
-**Go to SignUp page and create a useer**
+**Go to SignUp page and create a user**
 ![Create a user](/media/signup_page.png)
 
 **This is the Dashboard where you can add, edit, delete, pin and view your notes**
 ![Dashboard](/media/dashboard.png)
 
-**Add your first note here, feel free explore all the options in the rich text editor**
+**Add your first note here, feel free explore all the content options in the rich text editor**
 ![Add Notes](/media/add_notes.png)
 ![Note Added](/media/note_added.png)
 
