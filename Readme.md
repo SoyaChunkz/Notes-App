@@ -41,7 +41,7 @@ Check out the live demo of HashNotes [here](https://hashnotes-eight.vercel.app/)
 ![Add Notes](/media/add_notes.png)
 ![Note Added](/media/note_added.png)
 
-**You can edit your notes any time just with a double click**
+**You can edit your notes anytime just with a double click**
 ![Edit Notes](/media/edit_notes.png)
 
 **You switch between light and dark themes anytime just with a click**
