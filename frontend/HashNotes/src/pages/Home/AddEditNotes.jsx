@@ -120,7 +120,7 @@ const AddEditNotes = ( { noteData, type, onClose, getAllNotes, showToastMessage}
         <button 
             onClick={onClose} 
             className='w-8 h-8 rounded-md flex items-center justify-center absolute -top-2 -right-2 '>
-            <MdClose className='text-xl text-slate-400 hover:text-red-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:scale-125 transition-all ease-in-out ' />
+            <MdClose className='text-2xl text-slate-400 hover:text-red-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:scale-125 transition-all ease-in-out ' />
         </button>
 
         <div className='flex flex-col gap-2'>
