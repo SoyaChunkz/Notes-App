@@ -2,9 +2,6 @@
 
 HashNotes is a dynamic web application designed for personal and collaborative note-taking. It features a visually appealing and user-friendly interface, supporting seamless note management with advanced functionalities.
 
-## Live Demo
-
-Check out the live demo of HashNotes [here](https://hashnotes-eight.vercel.app/).
 
 ## Features
 
